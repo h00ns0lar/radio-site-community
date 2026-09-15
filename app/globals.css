@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #f8f9fb;
+  --surface: #ffffff;
+  --surface-2: #f1f3f6;
+  --line: #e4e7ec;
+  --line-soft: #edf0f4;
+  --foreground: #14181f;
+  --muted: #667085;
+  --signal: #0284c7;
+  --signal-soft: #075985;
+  --wave: #0f8f82;
+  --danger: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-signal: var(--signal);
+  --color-signal-soft: var(--signal-soft);
+  --color-wave: var(--wave);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans), "Pretendard Variable", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  --font-mono: var(--font-geist-mono), "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--background);
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
