@@ -26,14 +26,17 @@ export default function SignupForm() {
         />
       </div>
       <div>
-        <label htmlFor="email" className="text-xs text-muted">
-          이메일
+        <label htmlFor="username" className="text-xs text-muted">
+          아이디 (영문, 숫자, _ / 4~20자)
         </label>
         <input
-          id="email"
-          name="email"
-          type="email"
+          id="username"
+          name="username"
+          type="text"
           required
+          pattern="[a-zA-Z0-9_]{4,20}"
+          autoCapitalize="off"
+          autoCorrect="off"
           className="mt-1 w-full rounded-md border border-line bg-surface px-3 py-2 text-sm outline-none focus:border-signal"
         />
       </div>
@@ -50,6 +53,11 @@ export default function SignupForm() {
           className="mt-1 w-full rounded-md border border-line bg-surface px-3 py-2 text-sm outline-none focus:border-signal"
         />
       </div>
+
+      <p className="rounded-md border border-danger/40 bg-danger/10 px-3 py-2 text-xs text-danger">
+        이메일 없이 아이디로 가입하는 방식이라, 비밀번호를 잊으면 복구할 수 없어요. 잊지 않게 꼭
+        기억해두세요.
+      </p>
 
       <div>
         <span className="text-xs text-muted">역할</span>

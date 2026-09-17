@@ -12,14 +12,16 @@ export default function LoginForm() {
   return (
     <form action={formAction} className="mt-8 space-y-4">
       <div>
-        <label htmlFor="email" className="text-xs text-muted">
-          이메일
+        <label htmlFor="username" className="text-xs text-muted">
+          아이디
         </label>
         <input
-          id="email"
-          name="email"
-          type="email"
+          id="username"
+          name="username"
+          type="text"
           required
+          autoCapitalize="off"
+          autoCorrect="off"
           className="mt-1 w-full rounded-md border border-line bg-surface px-3 py-2 text-sm outline-none focus:border-signal"
         />
       </div>
